@@ -16,5 +16,8 @@ Example : WHERE city = 'Mumbai'
 Combined Query = 
                   # To get names and salaries of employees who live in city mumbai
                   SELECT name,salary FROM Employees WHERE city='Mumbai';
+
+                  #To get names of employees whose salary more than 50000
+                  SELECT name FROM Employees WHERE salary>50000;
                   
   
