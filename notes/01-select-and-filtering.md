@@ -1,6 +1,6 @@
 # SELECT and Filtering
 
-let's discuss about SELECT,FROM & WHERE :
+##let's discuss about SELECT,FROM & WHERE :
 1. SELECT -
   What data do u want ?
 Example:  SELECT name;
@@ -14,10 +14,10 @@ Example: select * FROM table_name;
 Example : WHERE city = 'Mumbai'
 
 Combined Query = 
-                  # To get names and salaries of employees who live in city mumbai
+                  ## To get names and salaries of employees who live in city mumbai
                   SELECT name,salary FROM Employees WHERE city='Mumbai';
 
-                  #To get names of employees whose salary more than 50000
+                  ##To get names of employees whose salary more than 50000
                   SELECT name FROM Employees WHERE salary>50000;
                   
   
