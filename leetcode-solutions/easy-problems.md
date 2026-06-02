@@ -37,3 +37,31 @@ LIMIT 1 to get one row
 OFFSET 1 to skip first row
 
 Difficulty : Medium 
+
+Problem 3 --- Nth Highest Salary
+
+problem link :
+https://leetcode.com/problems/nth-highest-salary
+
+CONCEPTS USED :
+SELECT
+DISTINCT
+ORDER BY
+LIMIT 
+OFFSET
+
+CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
+BEGIN
+SET N=N-1;
+  RETURN (
+      # Write your MySQL query statement below.
+        SELECT  DISTINCT salary FROM Employee
+        ORDER BY salary DESC LIMIT 1 OFFSET N
+  );
+END
+
+ Explanation :
+ I used distinct for no duplicates, order by salary desc for highest salaries and  limit 1 for for getting one row and offset n where it skips one row 
+ as according to n value it skips that many values i had  SET N = N-1 
+
+ Difficulty : Medium
