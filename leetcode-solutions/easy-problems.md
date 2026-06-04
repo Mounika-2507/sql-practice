@@ -65,3 +65,22 @@ END
  as according to n value it skips that many values i had  SET N = N-1 
 
  Difficulty : Medium
+
+ Problem 4 : --Rank Scores
+
+problem link :
+https://leetcode.com/problems/rank-scores
+
+CONCEPTS USED :
+SELECT
+DENSE_RANK()
+ORDER BY
+AS
+
+SELECT score, DENSE_RANK() OVER (ORDER BY score DESC ) AS 'rank' FROM Scores;
+
+Explanation:
+Here after many tries i found that i made a small mistake AS 'rank' which confused me , 
+we used denserank because after tie no skipping the value 
+
+Difficulty : Medium
