@@ -84,3 +84,24 @@ Here after many tries i found that i made a small mistake AS 'rank' which confus
 we used denserank because after tie no skipping the value 
 
 Difficulty : Medium
+
+Problem 181 : --Employees salary greater than manager salary
+
+problem link :
+https://leetcode.com/problems/employees-earning-more-than-their-managers
+
+CONCEPTS USED :
+SELECT
+INNER JOIN
+WHERE
+
+SELECT e2.name as Employee
+FROM employee e1
+INNER JOIN employee e2 ON e1.id = e2.managerID
+WHERE
+e1.salary < e2.salary;
+
+Explanation:
+we used inner join because they both id's are in same tables 
+
+Difficulty : Easy
