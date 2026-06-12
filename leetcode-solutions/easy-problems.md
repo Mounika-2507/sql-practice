@@ -119,10 +119,34 @@ COUNT
 
 SELECT email FROM Person GROUP BY email HAVING COUNT(email)>1;
 
-Explanation:
-we used ,
+Explanation: we used,
 GROUP BY email - creates group for unique email id's
 COUNT(email) - counts how many times each email appears
 HAVING COUNT(email) > 1 - filters the groups and keeps only those with duplicates
 
 Difficulty : Easy
+
+Problem 183 : Customers Who never Order
+
+problem link :
+https://leetcode.com/problems/duplicate-emails
+
+CONCEPTS USED :
+SELECT
+LEFT JOIN
+WHERE 
+IS NULL
+
+SELECT C.name AS Customers
+FROM Customers AS C
+LEFT JOIN Orders AS O
+ON C.id = O.customerId
+WHERE O.id IS NULL;
+
+Explanation: we used,
+LEFT JOIN - keeps all customers and unmatched orders as null
+WHERE O.id IS NULL - finds customers with no orders
+
+Difficulty : Easy
+
+
