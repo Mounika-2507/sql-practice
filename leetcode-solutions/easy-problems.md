@@ -105,3 +105,24 @@ Explanation:
 we used inner join because they both id's are in same tables 
 
 Difficulty : Easy
+
+Problem 182 : Duplicate Emails
+
+problem link :
+https://leetcode.com/problems/duplicate-emails
+
+CONCEPTS USED :
+SELECT
+GROUP BY 
+HAVING 
+COUNT 
+
+SELECT email FROM Person GROUP BY email HAVING COUNT(email)>1;
+
+Explanation:
+we used ,
+GROUP BY email - creates group for unique email id's
+COUNT(email) - counts how many times each email appears
+HAVING COUNT(email) > 1 - filters the groups and keeps only those with duplicates
+
+Difficulty : Easy
